@@ -18,8 +18,9 @@ public class Calculadora {
     System.out.println("2:restar 2 números ");
     System.out.println("3:multiplicar 2 números ");
     System.out.println("4:dividir 2 números ");
-    System.out.println("5:salir ");
-    
+    System.out.println("5:cual de los dos numeros es mayor ");
+    System.out.println("6:Porsentaje de un numero ");
+    System.out.println("7:salir ");
     numero = s.nextInt();
     
     do {
@@ -70,24 +71,61 @@ public class Calculadora {
             double z = s.nextDouble();
             double x = s.nextDouble();
             
+          
             double d = z/x;
             
             System.out.println("La divicion es = "+d); 
             break;
         
-        case 5:
+        case 7:
             
-            System.out.println("Para confirmar salida de la calculadora presione 5¡ para volver al menu principal 1¡ "); 
+            System.out.println("Para confirmar salida de la calculadora presione 7¡ para volver al menu principal 1¡ "); 
             numero = s.nextInt();
             
             break;
+        
+        case 5:
+            
+            System.out.println("ingrese los numeros para obtener el cual es mayor ");  
+           
+            a = s.nextInt();
+            b = s.nextInt();
+            
+            if (a > b) {
+                
+                System.out.println(a + "es mayor " + b);
+            }else { 
+                System.out.println(b + "es mayor " + a);
+            }    
+                   
+            break;
+        
+        case 6:   
+            
+            System.out.println("ingrese el numero ");  
+           
+            z = s.nextDouble();
+            
+            System.out.println("ingrese el porsentaje que quiere obtener de  " + z);  
+            
+            x = s.nextDouble();
+            
+            d = (x * z) / 100; 
+            
+            a = (int) x;
+            b = (int) z;
+            
+            System.out.println(" El " +  a + "% de " + b +" = " + d );  
+            
+            break;
+            
         default:
                 System.out.println("Ingrese una de las opciones anteriomente nombradas  ");
                 numero = s.nextInt();
             break;
         }   
         
-        if (numero<=4 && numero>=1) {
+        if (numero<=6 && numero>=1) {
             System.out.println();
             System.out.println("Digite el numero de la operacion que desea realizar");
             System.out.println();
@@ -95,7 +133,9 @@ public class Calculadora {
             System.out.println("2:restar 2 números ");
             System.out.println("3:multiplicar 2 números ");
             System.out.println("4:dividir 2 números ");
-            System.out.println("5:salir ");
+            System.out.println("5:cual de los dos numeros es mayor  ");
+            System.out.println("6:porsentaje de un numero ");
+            System.out.println("7:salir ");
             System.out.println();
             
             numero = s.nextInt();
@@ -103,7 +143,7 @@ public class Calculadora {
             
             
             
-    } while (numero<=4 && numero>=1);
+    } while (numero<=6 && numero>=1);
     
     
     
